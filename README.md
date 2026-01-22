@@ -50,7 +50,7 @@ Full documentation available at: [https://moncreneau-docs.vercel.app/docs/v1/sdk
 ```python
 client = Moncreneau(
     api_key='mk_live_...',
-    base_url='https://mc.duckdns.org/api/v1',  # optional
+    base_url='https://mc-prd.duckdns.org/api/v1',  # optional
     timeout=30  # optional, in seconds
 )
 ```
