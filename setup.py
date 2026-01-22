@@ -10,8 +10,8 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Moncreneau",
-    author_email="support@moncreneau.gn",
-    url="https://github.com/moncreneau/moncreneau-python",
+    author_email="moncreneau.rdv@gmail.com",
+    url="https://github.com/nbsidiki/moncreneau-python",
     packages=find_packages(),
     install_requires=[
         "requests>=2.28.0",

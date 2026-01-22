@@ -25,7 +25,7 @@ class Moncreneau:
     def __init__(
         self,
         api_key: str,
-        base_url: str = "https://api.moncreneau.gn/v1",
+        base_url: str = "https://mc.duckdns.org/api/v1",
         timeout: int = 30
     ):
         """
@@ -33,7 +33,7 @@ class Moncreneau:
         
         Args:
             api_key: Your Moncreneau API key (mk_test_... or mk_live_...)
-            base_url: API base URL (default: https://api.moncreneau.gn/v1)
+            base_url: API base URL (default: https://mc.duckdns.org/api/v1)
             timeout: Request timeout in seconds (default: 30)
         """
         http = HttpClient(api_key, base_url, timeout)

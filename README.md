@@ -33,7 +33,7 @@ print(appointment['id'])  # appt_abc123
 
 ## Documentation
 
-Full documentation available at: [https://docs.moncreneau.gn/sdks/python](https://docs.moncreneau.gn/sdks/python)
+Full documentation available at: [https://moncreneau-docs.vercel.app/docs/v1/sdks/python](https://moncreneau-docs.vercel.app/docs/v1/sdks/python)
 
 ## Features
 
@@ -50,7 +50,7 @@ Full documentation available at: [https://docs.moncreneau.gn/sdks/python](https:
 ```python
 client = Moncreneau(
     api_key='mk_live_...',
-    base_url='https://api.moncreneau.gn/v1',  # optional
+    base_url='https://mc.duckdns.org/api/v1',  # optional
     timeout=30  # optional, in seconds
 )
 ```
@@ -192,10 +192,10 @@ def create_appointment(request):
 
 ## Support
 
-- **Documentation**: [https://docs.moncreneau.gn](https://docs.moncreneau.gn)
-- **Discord**: [https://discord.gg/moncreneau](https://discord.gg/moncreneau)
-- **Email**: support@moncreneau.gn
-- **Issues**: [GitHub Issues](https://github.com/moncreneau/moncreneau-python/issues)
+- **Documentation**: [https://moncreneau-docs.vercel.app](https://moncreneau-docs.vercel.app)
+- **PyPI**: [https://pypi.org/project/moncreneau](https://pypi.org/project/moncreneau)
+- **Email**: moncreneau.rdv@gmail.com
+- **Issues**: [GitHub Issues](https://github.com/nbsidiki/moncreneau-python/issues)
 
 ## License
 

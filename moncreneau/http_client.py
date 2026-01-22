@@ -9,7 +9,7 @@ class HttpClient:
     def __init__(
         self,
         api_key: str,
-        base_url: str = "https://api.moncreneau.gn/v1",
+        base_url: str = "https://mc.duckdns.org/api/v1",
         timeout: int = 30
     ):
         self.api_key = api_key
