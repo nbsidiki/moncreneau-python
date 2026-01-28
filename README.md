@@ -21,14 +21,12 @@ client = Moncreneau('mk_live_YOUR_API_KEY')
 
 # Create an appointment
 appointment = client.appointments.create(
-    department_id='dept_123',
+    department_id=5,  # Integer: ID du département
     date_time='2026-01-20T10:00:00',
-    user_name='Jean Dupont',
-    user_phone='+224621234567',
-    user_email='jean.dupont@example.com'
+    name='Jean Dupont'  # Nom du bénéficiaire
 )
 
-print(appointment['id'])  # appt_abc123
+print(appointment['id'])  # 123
 ```
 
 ## Documentation
@@ -60,10 +58,9 @@ client = Moncreneau(
 ```python
 # Create
 appointment = client.appointments.create(
-    department_id='dept_123',
+    department_id=5,  # Integer: ID du département
     date_time='2026-01-20T10:00:00',
-    user_name='Jean Dupont',
-    user_phone='+224621234567'
+    name='Jean Dupont'  # Nom du bénéficiaire
 )
 
 # List
