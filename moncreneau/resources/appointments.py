@@ -9,23 +9,17 @@ class Appointments:
     
     def create(
         self,
-        department_id: str,
+        department_id: int,
         date_time: str,
-        user_name: str,
-        user_phone: str,
-        user_email: Optional[str] = None,
-        notes: Optional[str] = None
+        name: str
     ) -> Dict[str, Any]:
         """
         Create a new appointment
         
         Args:
-            department_id: ID of the department
-            date_time: Appointment date and time (ISO 8601 format)
-            user_name: Full name of the patient
-            user_phone: Phone number (international format, e.g. +224621234567)
-            user_email: Email address (optional)
-            notes: Additional notes (optional)
+            department_id: ID of the department (integer)
+            date_time: Appointment date and time (ISO 8601 format, e.g. '2026-02-15T10:00:00')
+            name: Full name of the patient
         
         Returns:
             Created appointment data
@@ -33,14 +27,8 @@ class Appointments:
         data = {
             'departmentId': department_id,
             'dateTime': date_time,
-            'userName': user_name,
-            'userPhone': user_phone
+            'name': name
         }
-        
-        if user_email:
-            data['userEmail'] = user_email
-        if notes:
-            data['notes'] = notes
         
         return self.http.post('/appointments', data)
     
