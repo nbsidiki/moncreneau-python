@@ -11,7 +11,8 @@ class Appointments:
         self,
         department_id: int,
         date_time: str,
-        name: str
+        name: str,
+        external_user_id: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Create a new appointment
@@ -20,15 +21,19 @@ class Appointments:
             department_id: ID of the department (integer)
             date_time: Appointment date and time (ISO 8601 format, e.g. '2026-02-15T10:00:00')
             name: Full name of the patient
+            external_user_id: Your system's user identifier for tracking (optional)
         
         Returns:
-            Created appointment data
+            Created appointment data including externalUserId if provided
         """
         data = {
             'departmentId': department_id,
             'dateTime': date_time,
             'name': name
         }
+        
+        if external_user_id is not None:
+            data['externalUserId'] = external_user_id
         
         return self.http.post('/appointments', data)
     
