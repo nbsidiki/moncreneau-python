@@ -85,7 +85,7 @@ departments = client.departments.list()
 
 # Get availability
 availability = client.departments.get_availability(
-    'dept_123',
+    5,
     start_date='2026-01-20',
     end_date='2026-01-27'
 )
