@@ -60,6 +60,7 @@ class Appointments:
         size: int = 50,
         status: Optional[str] = None,
         department_id: Optional[str] = None,
+        external_user_id: Optional[str] = None,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None
     ) -> Dict[str, Any]:
@@ -71,6 +72,7 @@ class Appointments:
             size: Number of items per page (max 100)
             status: Filter by status (SCHEDULED, COMPLETED, CANCELLED, etc.)
             department_id: Filter by department ID
+            external_user_id: Filter by your external user ID
             start_date: Filter appointments after this date
             end_date: Filter appointments before this date
         
@@ -83,6 +85,8 @@ class Appointments:
             params['status'] = status
         if department_id:
             params['departmentId'] = department_id
+        if external_user_id:
+            params['externalUserId'] = external_user_id
         if start_date:
             params['startDate'] = start_date
         if end_date:
